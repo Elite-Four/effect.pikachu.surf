@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Effect.Pikachu.Surf</title>
+  <link rel="stylesheet" href="//unpkg.com/bulma">
+  <style>[v-cloak] { display: none; }</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Effectmon</h1>
+        <h2 class="subtitle"><a href="https://effect.pikachu.surf/">https://effect.pikachu.surf/</a></h2>
+      </div>
+    </div>
+  </header>
+  <main class="container" v-cloak>
+    <section class="buttons">
+      <button class="button"
+        v-for="(active, type) in types"
+        :key="type"
+        :class="active ? 'is-dark' : 'is-light'"
+        @click="types[type] = !active"
+      >{{ type }}</button>
+    </section>
+    <section class="content">
+      <ul>
+        <li v-for="result in results">
+          <strong>{{ result.pokemon }}</strong>
+          {{ result.types.join(' + ') }}
+          <span class="tag">{{ result.effect }}</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Effectmon</strong> by <a href="https://gerhut.me/">George Cheng</a>. The source code is licensed
+        <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+  <script src="//unpkg.com/vue"></script>
+  <script src="types.js"></script>
+  <script src="pokemons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

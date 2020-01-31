@@ -1,0 +1,24 @@
+{
+  "name": "effect.pikachu.surf",
+  "version": "1.0.0",
+  "description": "打击面计算器",
+  "main": "docs/index.html",
+  "scripts": {
+    "start": "http-server docs",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elite-Four/effect.pikachu.surf.git"
+  },
+  "author": "George Cheng <Gerhut@GMail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elite-Four/effect.pikachu.surf/issues"
+  },
+  "homepage": "https://github.com/Elite-Four/effect.pikachu.surf#readme",
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "standard": "^14.3.1"
+  }
+}
